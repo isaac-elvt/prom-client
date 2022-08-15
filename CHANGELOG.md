@@ -11,6 +11,15 @@ project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 
+- feat: support for OpenMetrics registries, including exemplars
+
+- feat: out of the box support for exemplars populated with telemetry data on
+  default metrics when OpenTelemetry is loaded in the project
+
+- feat: new option for calling `observe()` and `inc()` methods on the histogram
+  and counter metric types that can be passed an object of format
+  `{labels: a, value: b, exemplarLabels: c}`
+
 - The `done()` functions returned by `gauge.startTimer()` and
   `summary.startTimer()` now return the timed duration. Histograms already had
   this behavior.
